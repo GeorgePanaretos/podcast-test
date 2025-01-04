@@ -16,6 +16,10 @@ jobs:
           pip install pyyaml
       - name: Run Feed Generator
         run: python feed.py
+      - name: Set Git user
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
       - name: Push Repo
         run: |
           git config user.name github-actions
